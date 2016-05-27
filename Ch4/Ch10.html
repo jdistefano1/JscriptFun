@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ch 10 Var Scoping</title>
+
+    <script type="text/javascript">
+
+
+        /*
+        if (true) {
+
+            var x = 5;
+        };
+
+        document.write("<br />"+ x);
+        */
+
+         myScope = "global";
+
+        (function () {
+            var myScope = "function";
+            alert('inside the function the scope is: ' + myScope);
+        })();
+
+        alert('outside the function, the scope is: ' + myScope);
+
+    </script>
+</head>
+<body>
+    <h1>Global Scope vs function Scoping</h1>
+</body>
+</html>
